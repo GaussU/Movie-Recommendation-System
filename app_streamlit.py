@@ -146,7 +146,7 @@ def init_database_cli(data_path=None, drop_existing=False):
     import os
     
     if data_path is None:
-        data_path = "movie_dataset"
+        data_path = "../movie_dataset"
     
     if not os.path.exists(data_path):
         print(f"❌ Error: Data path does not exist: {data_path}")
@@ -187,7 +187,7 @@ def init_database_ui():
     st.subheader("Data Path Configuration")
     st.info("💡 **Tip**: This feature uses the exact same initialization logic as `preprocessing.ipynb` and `init_db.py` (based on `MovieLensSystem` class in `preprocessing.py`), ensuring consistency.")
     
-    default_data_path = "../movie_dataset"
+    default_data_path = "movie_dataset"
     data_path = st.text_input(
         "Data Folder Path",
         value=default_data_path,
