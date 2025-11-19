@@ -146,7 +146,7 @@ def init_database_cli(data_path=None, drop_existing=False):
     import os
     
     if data_path is None:
-        data_path = "../movie_dataset"
+        data_path = "movie_dataset"
     
     if not os.path.exists(data_path):
         print(f"❌ Error: Data path does not exist: {data_path}")
